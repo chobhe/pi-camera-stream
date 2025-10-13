@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+.eggs/
+*.log
+*.sqlite3
+
+# Poetry
+.cache/
+.poetry/
+*.lock
+*.venv
+venv/
+.env
+
+# System
+.DS_Store
+.idea/
+.vscode/

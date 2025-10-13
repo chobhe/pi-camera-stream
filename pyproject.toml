@@ -1,0 +1,21 @@
+[project]
+name = "pi-camera-stream"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Charlie He",email = "he.Charlie@yahoo.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "flask>=3.1.2",
+    "picamera2>=0.3.31",
+    "av==15.1.0"
+]
+
+[tool.poetry]
+packages = [{include = "pi_camera_stream", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
