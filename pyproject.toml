@@ -10,7 +10,11 @@ requires-python = ">=3.13"
 dependencies = [
     "flask>=3.1.2",
     "picamera2>=0.3.31",
-    "av==15.1.0"
+    "av==15.1.0",
+    "psutil (>=7.1.0,<8.0.0)",
+    "ultralytics (>=8.3.213,<9.0.0)",
+    "opencv-python-headless (>=4.12.0.88,<5.0.0.0)",
+    "numpy (>=2.0.0,<2.3.0)"
 ]
 
 [tool.poetry]
