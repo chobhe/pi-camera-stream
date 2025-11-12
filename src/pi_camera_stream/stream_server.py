@@ -13,9 +13,14 @@ import time
 import psutil
 from ultralytics import YOLO
 import numpy as np  
-import cv2         
+import cv2
+from pathlib import Path         
 
 app = Flask(__name__)
+
+# Get project root directory (parent of src directory)
+PROJECT_ROOT = Path(__file__).parent.parent.parent
+MODEL_PATH = PROJECT_ROOT / "yolov8n_ncnn_model"
 
 # Try to initialize the camera safely (so app still runs if cam absent)
 picam2 = None
@@ -46,7 +51,7 @@ def generate_frames():
               b"\r\n"
           )
 
-    model = YOLO("yolov8n_ncnn_model", verbose=False)
+    model = YOLO(str(MODEL_PATH), verbose=False)
     stream = io.BytesIO()
     while True:
       stream.seek(0)
