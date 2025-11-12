@@ -6,7 +6,7 @@ authors = [
     {name = "Charlie He",email = "he.Charlie@yahoo.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = [
     "flask>=3.1.2",
     "picamera2>=0.3.31",
@@ -14,7 +14,8 @@ dependencies = [
     "psutil (>=7.1.0,<8.0.0)",
     "ultralytics (>=8.3.213,<9.0.0)",
     "opencv-python-headless (>=4.12.0.88,<5.0.0.0)",
-    "numpy (>=2.0.0,<2.3.0)"
+    "numpy (>=2.0.0,<2.3.0)",
+    "onnx (>=1.19.1,<2.0.0)"
 ]
 
 [tool.poetry]
