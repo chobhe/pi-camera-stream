@@ -1,0 +1,51 @@
+I[19:47:51.378] clangd version 21.1.0 (https://github.com/llvm/llvm-project 3623fe661ae35c6c80ac221f14d85be76aa870f1)
+I[19:47:51.378] Features: windows+grpc
+I[19:47:51.378] PID: 33300
+I[19:47:51.378] Working directory: c:\Users\14087\pi-camera-stream\resources\cpp_postprocessing
+I[19:47:51.378] argv[0]: c:\Users\14087\AppData\Roaming\Cursor\User\globalStorage\llvm-vs-code-extensions.vscode-clangd\install\21.1.0\clangd_21.1.0\bin\clangd.exe
+I[19:47:51.384] Starting LSP over stdin/stdout
+I[19:47:51.385] <-- initialize(0)
+I[19:47:51.398] --> reply:initialize(0) 13 ms
+I[19:47:51.404] <-- initialized
+I[19:47:51.414] <-- textDocument/didOpen
+I[19:47:51.416] <-- textDocument/documentSymbol(1)
+I[19:47:51.416] <-- textDocument/documentLink(2)
+I[19:47:51.417] Loaded compilation database from c:\Users\14087\pi-camera-stream\resources\cpp_postprocessing\compile_commands.json
+I[19:47:51.417] ASTWorker building file c:\Users\14087\pi-camera-stream\resources\cpp_postprocessing\helloworld.cpp version 1 with command 
+[C:/Users/14087/pi-camera-stream/resources/cpp_postprocessing/build]
+"C:\\msys64\\ucrt64\\bin\\g++.exe" --driver-mode=g++ -std=gnu++17 -o "CMakeFiles\\my_app.dir\\helloworld.cpp.obj" -c "-resource-dir=C:\\Users\\14087\\AppData\\Roaming\\Cursor\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\21.1.0\\clangd_21.1.0\\lib\\clang\\21" -- "c:\\Users\\14087\\pi-camera-stream\\resources\\cpp_postprocessing\\helloworld.cpp"
+I[19:47:51.418] --> window/workDoneProgress/create(0)
+I[19:47:51.418] Enqueueing 2 commands for indexing
+I[19:47:51.420] <-- reply(0)
+I[19:47:51.420] --> $/progress
+I[19:47:51.420] --> $/progress
+I[19:47:51.421] <-- textDocument/inlayHint(3)
+I[19:47:51.438] --> textDocument/clangd.fileStatus
+I[19:47:51.454] Built preamble of size 273636 for file c:\Users\14087\pi-camera-stream\resources\cpp_postprocessing\helloworld.cpp version 1 in 0.02 seconds
+I[19:47:51.454] --> workspace/semanticTokens/refresh(1)
+I[19:47:51.461] <-- reply(1)
+I[19:47:51.463] <-- textDocument/semanticTokens/full(4)
+E[19:47:51.500] IncludeCleaner: Failed to get an entry for resolved path '' from include <iostream> : no such file or directory
+E[19:47:51.500] IncludeCleaner: Failed to get an entry for resolved path '' from include <vector> : no such file or directory
+E[19:47:51.500] IncludeCleaner: Failed to get an entry for resolved path '' from include <string> : no such file or directory
+I[19:47:51.501] --> textDocument/publishDiagnostics
+I[19:47:51.501] --> textDocument/inactiveRegions
+I[19:47:51.501] --> reply:textDocument/documentSymbol(1) 85 ms
+I[19:47:51.501] --> reply:textDocument/documentLink(2) 84 ms
+I[19:47:51.501] --> reply:textDocument/inlayHint(3) 80 ms
+I[19:47:51.502] --> reply:textDocument/semanticTokens/full(4) 38 ms
+I[19:47:51.502] --> textDocument/clangd.fileStatus
+I[19:47:51.629] <-- textDocument/foldingRange(5)
+I[19:47:51.630] --> reply:textDocument/foldingRange(5) 0 ms
+I[19:48:07.736] <-- textDocument/inlayHint(6)
+I[19:48:07.737] --> reply:textDocument/inlayHint(6) 1 ms
+I[19:48:07.737] --> textDocument/clangd.fileStatus
+I[19:48:08.520] <-- textDocument/inlayHint(7)
+I[19:48:08.520] --> reply:textDocument/inlayHint(7) 0 ms
+I[19:48:08.520] --> textDocument/clangd.fileStatus
+I[19:48:13.410] <-- textDocument/codeAction(8)
+I[19:48:13.411] --> reply:textDocument/codeAction(8) 1 ms
+I[19:48:13.411] --> textDocument/clangd.fileStatus
+I[19:48:14.298] <-- textDocument/codeAction(9)
+I[19:48:14.299] --> reply:textDocument/codeAction(9) 0 ms
+I[19:48:14.299] --> textDocument/clangd.fileStatus

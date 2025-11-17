@@ -1,0 +1,9 @@
+CompileFlags:
+  Add:
+    - -std=gnu++17
+    - -stdlib=libstdc++
+    - "--target=x86_64-w64-mingw32"
+    - "-isystemC:/msys64/ucrt64/include/c++/14.2.0"
+    - "-isystemC:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32"
+    - "-isystemC:/msys64/ucrt64/include/c++/14.2.0/backward"
+    - "-isystemC:/msys64/ucrt64/include"

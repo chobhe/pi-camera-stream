@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/14087/pi-camera-stream/resources/cpp_postprocessing/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -std=gnu++17 -o CMakeFiles\\my_app.dir\\bounding_boxes.cpp.obj -c C:\\Users\\14087\\pi-camera-stream\\resources\\cpp_postprocessing\\bounding_boxes.cpp",
+  "file": "C:/Users/14087/pi-camera-stream/resources/cpp_postprocessing/bounding_boxes.cpp",
+  "output": "CMakeFiles/my_app.dir/bounding_boxes.cpp.obj"
+},
+{
+  "directory": "C:/Users/14087/pi-camera-stream/resources/cpp_postprocessing/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -std=gnu++17 -o CMakeFiles\\my_app.dir\\helloworld.cpp.obj -c C:\\Users\\14087\\pi-camera-stream\\resources\\cpp_postprocessing\\helloworld.cpp",
+  "file": "C:/Users/14087/pi-camera-stream/resources/cpp_postprocessing/helloworld.cpp",
+  "output": "CMakeFiles/my_app.dir/helloworld.cpp.obj"
+}
+]

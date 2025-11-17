@@ -4,31 +4,38 @@ import psutil
 from .camera import CameraManager
 import time
 app = Flask(__name__)
+import threading
+from detection_callback import start_detection_pipeline, detection_frames_queue
 
 
 camera_manager = CameraManager()
+detection_thread = threading.Thread(target=start_detection_pipeline)
+detection_thread.start()
+
+# Give the pipeline a moment to initialize
+time.sleep(2)
+
 # ----------------------------------------------------------------------
 # Streaming generator
 # ----------------------------------------------------------------------
 def generate_frames(camera_manager):
-    if not camera_manager.is_available():
-        error_msg = b"Camera not available"
-        while True:
+    """Generate frames from the detection pipeline queue"""
+    while True:
+        try:
+            # Get frame from detection pipeline (blocking with timeout)
+            frame = detection_frames_queue.get(timeout=1.0)
+            yield (
+                b"--frame\r\n"
+                b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n"
+            )
+        except:
+            # If no frame available, yield a placeholder or wait
+            error_msg = b"Waiting for detection pipeline..."
             yield (
                 b"--frame\r\n"
                 b"Content-Type: image/jpeg\r\n\r\n" + error_msg + b"\r\n"
             )
-            time.sleep(1)
-
-    while True:
-        frame = camera_manager.capture_frame()
-        if frame is None:
-            continue
-
-        yield (
-            b"--frame\r\n"
-            b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n"
-        )
+            time.sleep(0.1)
 
 
 # ----------------------------------------------------------------------
